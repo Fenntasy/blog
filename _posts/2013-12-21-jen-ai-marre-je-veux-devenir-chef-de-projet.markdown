@@ -1,0 +1,29 @@
+---
+layout: post
+title:  "J'en ai marre, je veux devenir chef de projet !"
+cover:  "Christopher_Kraft-_flight_director_during_Project_Mercury-_works_at_his_console_inside_the_Flight_Control_area_at_Mercury_Mission_Control-1.jpg"
+cover_position: "0 30%"
+date:   2013-12-21 13:14:00 +0100
+categories: rant
+---
+Après avoir lu l'article de Rue89 : <a href="http://www.rue89.com/2013/05/07/petit-voulais-etre-informaticien-jetais-bon-maths-242111" target="_blank">Petit, je voulais être informaticien, mais j’étais bon en maths</a> et avoir discuté avec des amis, je me suis aperçu de la chose suivante : certains dev en ont marre de leur travail et veulent passer à autre chose. L'évolution logique en France étant le management, pourquoi pas devenir chef de projet<sup id="a1">[1](#f1)</sup>.
+
+Mais en y regardant de plus près, ce n'est pas de développer dont ils ont marre, c'est de réaliser le travail d'un ouvrier, un ouvrier très bien payé, mais un ouvrier quand même. Que ce soit en Tierce Maintenance Applicative (TMA pour faire court) qui pourrait se résumer au titre de debugger ou intégré à une (trop ?) grosse équipe sur un logiciel pas forcément intéressant (prenons un ERP ou Sharepoint au pif), le souci n'est pas tant dans le travail que dans la façon dont il est amené. La mode de l'industrialisation aidant, ces developpeurs ont une liste de tâche à accomplir dans un ensemble plus grand qu'ils ne maitrisent pas forcément ou n'ont même jamais utilisé eux même. "Quand je demande la raison d'une fonctionnalité, on me répond que c'est une demande du client, j'ai fini par arrêter de demander" m'a dit un ami.
+
+<a href="http://farm4.staticflickr.com/3242/3116583803_7ff7210360_z.jpg"><img class="alignnone" title="Christmas over the Cubicle - Jackal of all trades (CC BY-NC-SA 2.0)" alt="" src="http://farm4.staticflickr.com/3242/3116583803_7ff7210360_b.jpg" /></a>
+
+Or, le développeur ou l'ingénieur en informatique ne s'est pas embarqué dans ce métier pour ça ! Que l'on me comprenne bien, je n'ai rien contre les ouvriers, je suis plutôt de l'avis de remplacer les ouvriers par des machines qui sont faites pour des taches rébarbatives et répétitives et de mettre en place le revenu de base pour leur permettre de faire ce qu'ils veulent au lieu de simplement travailler pour se nourrir (rien n'empêche de devenir artisan plutôt qu'ouvrier dans le même domaine). Mais c'est un autre sujet et j'y reviendrai sûrement une autre fois.
+
+La plupart des gens (que je connais du moins) se sont lancés dans le développement pour créer des choses et exciter leurs neurones. Pour moi, le meilleur sentiment que l'on puisse avoir en tant que dev, c'est d'avoir trouvé une solution à un problème complexe. J'insiste sur le mot complexe : résoudre des bugs peut être gratifiant en soi mais passer toute sa semaine à fermer des tickets après avoir contourné un bug sans réfléchir, sur une architecture non documentée, vieille et qui menace de s'écrouler à tout moment, n'est <strong>pas</strong> gratifiant. Il est important d'avoir une vision d'ensemble de ce sur quoi on travaille, sinon on finit par perdre toute motivation et on bacle le travail. Pire ! En baclant le travail, on donne l'impression d'aller plus vite et on est récompensé; Comment ne pas tomber dans un cercle vicieux ?
+
+Alors qui sont les coupables ? La solution de facilité : ceux qui ont organisé l'industrialisation massive des informaticiens et qui ont jugés qu'il était plus sûr de les considérer comme totalement interchangeable et de les comptabiliser comme des ouvriers. Mais j'ai bien peur que l'acceptation de cet état de fait a été bien plus efficace que la volonté de quelques analystes. Quelle méthode pour cela ? Faire entrer dans la tête des développeurs en devenir que le développement était un passage naturel et obligatoire vers le Graal : devenir chef de projet. Et ça, en leur faisant miroiter un salaire d'entrée supérieur à la moyenne<sup id="a2">[2](#f2)</sup>. Bien évidemment je parle ici des SSII qui sont, je crois, une spécificité française et qui ont fortement contribué à cette vision du développement jetable et interchangeable en France.
+
+Malheureusement, cet article n'est qu'une constatation, je ne dispose pas d'une solution en dehors de demander aux développeurs qui subissent ce genre de considération de garder la tête haute et éventuellement de chercher une entreprise ou son travail sera apprécié à sa juste valeur (si si, ça existe et ça peut même se trouver dans quelques SSII). Au minimum, de se rendre compte du problème et de ne pas devenir de nouveaux vecteurs du mépris de la technique une fois qu'ils auront réussi à s'échapper de leur statut d'ouvrier. Par exemple, si vous devenez chefs de projet, incluez l'avis des développeurs de votre équipe dans la chaine décisionnelle. Vous constaterez sans doute une augmentation de la motivation et de la productivité : un développeur dans de bonnes conditions est bien plus efficace que quelqu'un a qui on dit d'obéir sans réfléchir.
+
+<div class="footnote">
+<b id="f1">1</b> : Ce problème est evoqué chez Mageekguy : <a href="http://blog.mageekbox.net/?post/2012/07/04/Le-developpeur-une-espece-en-danger-d-extinction" target="_blank">Le développeur, une espèce en danger d'exctinction</a> ainsi que dans plein d'autre articles que j'ai n'ai pas lu je suppose. <a href="#a1">↩</a>
+</div>
+
+<div class="footnote">
+<b id="f2">2</b> : faites le test sur <a href="http://www.inegalites.fr/spip.php?page=salaire">l'observatoire des inégalités</a> j'ai considéré 2000 € net par mois qui correspond grosso modo à 32 000 € brut par an, qui n'est pas encore le salaire d'entrée à Paris, on est déjà dans les 33% les plus riches de France <a href="#a2">↩</a>
+</div>

@@ -1,0 +1,19 @@
+---
+layout: post
+title:  "+1 is enough"
+cover:  "-1-header-1.jpg"
+cover_position: "0 40%"
+date:   2015-09-10 14:51:00 +0100
+categories: rant
+---
+A little rant without too much consequences &mdash; and in honor of [google+ last breaths](http://techcrunch.com/2015/07/27/google-weans-itself-off-of-google/) &mdash; but I cringe every time I see it.
+
+Here it goes: +1 is a way of saying that [you agree with something](https://en.wiktionary.org/wiki/%2B1) or that [you come with someone to an event](https://en.wiktionary.org/wiki/plus_one). It's simple, beautifully mathematical and a little bit democratic in principle. You add your own voice to an idea and you could make it simple to vote this way ([as the Apache Software Foundation seems to have done in the past](http://laughingmeme.org/2011/03/30/1-for-knowing-your-history/)). You say if you are a -1 (you're against the idea), a 0 (you're neutral) or a +1 (you like it). In the end, you add the results and you know if the idea will be held on if the result is positive (I don't know what happens in the 0 case). It's clean, it's pure, it's beautiful!
+
+That being said, it only works if everyone has exactly one vote. It stops being democratic if someone doesn't play by the rules and just says +2, +10, +1000, +1 000 000 and so on, which happens __a lot__ nowadays. I know it's just a way of conveying enthusiasm by saying you're not just adding one but a lot more weight to the comment but I can't shake the idea that you think (consciously or not) your opinion matter more than everyone else's.
+
+But the thing is... If you just say +1, everyone will understand that you agree with the statement your are referring to. You don't need to add more to be understood, you're just using a random number that have no value anymore. Is there a scale with the number your chose? Can we look the previous values you used and assume that your liking of the ideas is ranked by them? Am I to assume that a mere +1 is a quasi neutral stance? Yeah, I know, I know... It's not like that, it's just a way of expressing yourself and "language" evolve...
+
+![You're not wrong, you're just an asshole](/assets/youre-not-wrong.jpg "Note that it could well apply to me")
+
+Cover image credits: [Maurizio Pesce](https://www.flickr.com/photos/pestoverde/16138179858)
