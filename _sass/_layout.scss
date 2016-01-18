@@ -1,39 +1,69 @@
 /**
  * Site header
  */
+ $header-height: 70px;
+ $header-scrolled-height: 56px;
 .site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
-    min-height: 56px;
-
+    height: $header-height;
     // Positioning context for the mobile navigation icon
-    position: relative;
+    position: fixed;
+    width: 100%;
+    background: transparent;
+    transition: height 0.3s, background 0.3s;
+    will-change: height, background;
+
+    &.scrolled {
+      height: 56px;
+      background: black;
+
+      .site-title, .site-nav {
+        line-height: $header-scrolled-height;
+      }
+    }
 }
 
 .site-title {
     font-size: 26px;
     font-weight: 300;
-    line-height: 56px;
+    line-height: $header-height;
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: line-height 0.3s;
+    will-change: line-height;
+    text-shadow:
+      0 0 15px rgba(black, .5),
+      0 0 20px rgba(black, .4),
+      0 0 25px rgba(black, .3);
 
     &,
     &:visited {
-        color: $grey-color-dark;
+        color: white;
     }
 }
 
 .site-nav {
     float: right;
-    line-height: 56px;
+    line-height: $header-height;
+    transition: line-height 0.3s;
+    will-change: line-height;
+    text-shadow:
+      0 0 15px rgba(black, .5),
+      0 0 20px rgba(black, .4),
+      0 0 25px rgba(black, .3);
 
     .menu-icon {
         display: none;
     }
 
     .page-link {
-        color: $text-color;
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
         line-height: $base-line-height;
 
         // Gaps between nav items, but not on the last one
@@ -81,6 +111,7 @@
         }
 
         .page-link {
+            color: black;
             display: block;
             padding: 5px 10px;
 
@@ -90,6 +121,15 @@
             margin-left: 20px;
         }
     }
+}
+
+.home-cover {
+  background: url(../assets/scenery.jpg) no-repeat bottom center scroll;
+  background-color: black;
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
 }
 
 .cover {

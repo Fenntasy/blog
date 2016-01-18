@@ -9,10 +9,11 @@
       <div class="cover" style="
         background-image: url(/assets/{{ page.cover }}); {% if page.cover_position %}
         background-position: {{ page.cover_position }}{% endif %}"
-      ></div>
+      >
+          {% include header.html %}
+    </div>
     {% endif %}
 
-    {% include header.html %}
 
     <div class="page-content">
       <div class="wrapper">
@@ -22,6 +23,7 @@
 
     {% include footer.html %}
 
+    <script src="js/main.js"></script>
   </body>
 
 </html>
