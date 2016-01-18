@@ -139,6 +139,16 @@
   height: 400px;
 }
 
+.small-cover {
+  width: 100%;
+  height: $header-scrolled-height;
+
+  .site-header {
+    line-height: $header-scrolled-height;
+    background: black;
+  }
+}
+
 /**
  * Site footer
  */
