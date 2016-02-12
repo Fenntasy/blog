@@ -1,0 +1,175 @@
+{
+  "basics": {
+    "name": "Vincent Billey",
+    "label": "All round Developer",
+    "picture": "http://vincent.billey.me/assets/Vincent-Billey.jpg",
+    "email": "vincent.billey@gmail.com",
+    "website": "http://vincent.billey.me",
+    "summary": "",
+    "location": {
+      "address": "Lille",
+      "countryCode": "FR"
+    },
+    "profiles": [{
+      "network": "Twitter",
+      "username": "@Fenntasy",
+      "url": "http://twitter.com/Fenntasy"
+    },{
+      "network": "Github",
+      "username": "Fenntasy",
+      "url": "http://github.com/Fenntasy"
+    }]
+  },
+  "work": [{
+    "company": "Axiome",
+    "position": "CTO and co-founder",
+    "website": "http://www.axiome.io",
+    "startDate": "2014-10-14",
+    "endDate": "2016-02-10",
+    "summary": "Frontend dev of Metod",
+    "highlights": [
+      "Development of a project management webapp: www.metod.io",
+      "Front-end JS (React, Flux, ES2015+, Babel, Webpack, eslint)"
+    ]
+  },{
+    "company": "3DDUO",
+    "position": "Web technical director",
+    "website": "http://www.3dduo.com",
+    "startDate": "2011-07-01",
+    "endDate": "2014-10-14",
+    "summary": "Web Game Development with facebook",
+    "highlights": [
+      "Des Chiffres et Des Lettres Online (Word game)",
+      "Introduction of git in the company",
+      "Redesign of www.allofamille.fr with FuelPHP"
+    ]
+  },{
+    "company": "Ineat Conseil",
+    "position": "Developper",
+    "website": "http://www.ineat-conseil.com/",
+    "startDate": "2011-02-01",
+    "endDate": "2011-07-01",
+    "summary": "Joomla Development",
+    "highlights": [
+      "Intranet for Yamaha Motors France with Joomla (SSO + NTLM)"
+    ]
+  },{
+    "company": "3DDUO",
+    "position": "Developper",
+    "website": "http://www.3dduo.com",
+    "startDate": "2008-09-01",
+    "endDate": "2011-01-01",
+    "summary": "Web Game Development",
+    "highlights": [
+      "Internal tools development",
+      "Serious games",
+      "Development of a MMO server in Java: Leelh"
+    ]
+  },{
+    "company": "MDEIE Quebec",
+    "position": "Intern",
+    "website": "https://www.economie.gouv.qc.ca/",
+    "startDate": "2008-02-01",
+    "endDate": "2008-05-01",
+    "summary": "Install, config and training of an internal mediawiki"
+  },{
+    "company": "No Parking",
+    "position": "Intern",
+    "website": "http://www.noparking.net/",
+    "startDate": "2006-09-01",
+    "endDate": "2006-11-01",
+    "summary": "Module development for OpenTime",
+    "highlights": [
+      "Billing automation",
+      "Finance optimization"
+    ]
+  }],
+  "education": [{
+    "institution": "Telecom Lille",
+    "studyType": "Master Degree in Networks and Telecommunications",
+    "startDate": "2005-09-01",
+    "endDate": "2011-06-30"
+  }],
+  "skills": [{
+    "name": "HTML",
+    "keywords": [
+      "HTML5",
+      "CSS3"
+    ]
+  },{
+    "name": "Code",
+    "keywords": [
+      "JavaScript",
+      "PHP",
+      "Python",
+      "Bash",
+      "Notions in functional programming, ruby, Io"
+    ]
+  },{
+    "name": "Databases",
+    "keywords": [
+      "PostgreSQL",
+      "MySQL",
+      "AWS DynamoDB"
+    ]
+  },{
+    "name": "Tools",
+    "keywords": [
+      "Git",
+      "NPM",
+      "Webpack",
+      "Babel",
+      "Gulp",
+      "Grunt"
+    ]
+  }],
+  "languages": [{
+    "language": "French",
+    "fluency": "Native speaker"
+  },{
+    "language": "English",
+    "fluency": "Fluent (TOEIC: 970/990)"
+  },{
+    "language": "Japanese",
+    "fluency": "Notions"
+  }],
+  "interests": [{
+    "name": "Podcasts",
+    "keywords": [
+      "The web ahead",
+      "Developer tea",
+      "JS Jabber",
+      "Shop Talk Show",
+      "React podcast",
+      "Reply all",
+      "Material",
+      "Startup",
+      "Internet History Podcast",
+      "Cortex",
+      "Hello Internet",
+      "Designing Yourself"
+    ]
+  },{
+    "name": "Avid reader",
+    "keywords": [
+      "Novels",
+      "Audible books",
+      "Comics",
+      "Manga"
+    ]
+  },{
+    "name": "Politics",
+    "keywords": [
+      "debates",
+      "basic income"
+    ]
+  },{
+    "name": "Gamer",
+    "keywords": [
+      "Video games",
+      "Board games",
+      "Card games",
+      "Role-playing games"
+    ]
+  }]
+}
