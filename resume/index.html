@@ -21,7 +21,7 @@ body{
   font-family: 'Open Sans', Arial, Tahoma;
   font-weight: 400;
   color: #363636;
-  background: #334960;
+  background: #9fa8da;
 }
 blockquote {
   font-size: 1em;
@@ -42,7 +42,7 @@ blockquote {
   border-radius: 50%;
   overflow: hidden;
   padding: 5px;
-  background: #334960;
+  background: #333;
   display: inline-block;
 }
 #photo img{
@@ -84,7 +84,7 @@ blockquote {
   margin-bottom: 25px;
 }
 .box h2{
-  color: #227c74;
+  color: #1a237e;
   font-size: 1.5em;
   font-weight: 700;
   text-transform: uppercase;
@@ -93,7 +93,6 @@ blockquote {
 #awards,
 #education{
   margin-top: 20px;
-  margin-bottom: 0;
   position: relative;
   padding: 1em 0;
   list-style: none;
@@ -125,7 +124,7 @@ blockquote {
 }
 #awards .year,
 #education .year{
-  width: 14%;
+  width: 15%;
   background: #fff;
   padding: 10px;
   font-weight: 700;
@@ -133,7 +132,7 @@ blockquote {
 }
 #awards .description,
 #education .description{
-  width: 83%;
+  width: 85%;
   display: inline-block;
   background: #eee;
   margin-bottom: 10px;
@@ -192,19 +191,15 @@ blockquote {
   font-size: 1.2em;
   font-weight: bold;
 }
+.job .list-group {
+  margin-top: 10px;
+}
 .job .description{
   line-height: 1.5em;
 }
 .job .highlights{
-  padding: 5px 0;
+  padding: 10px 0;
   font-weight: bold;
-}
-.job .job-details {
-  padding-left: 5%;
-  width: 100%;
-}
-.publication {
-  margin-bottom: 0;
 }
 .publication .name{
   font-size: 1em;
@@ -266,9 +261,10 @@ blockquote {
   margin-right: 5px;
   margin-bottom: 5px;
   padding: 5px 10px;
-  background: #32475c;
+  background: #3f51b5;
   position: relative;
   font-size: .85em;
+  border-radius: 5px;
 }
 .skill-level {
   background-color: #227c74;
@@ -284,6 +280,27 @@ blockquote {
   margin: 10px 0;
   padding-bottom: 10px;
   border-bottom: 1px solid #eee;
+}
+
+@media (min-width: 500px) {
+  #education .description{
+    width: 85%;
+  }
+}
+@media (min-width: 768px) {
+  #education .description{
+    width: 85%;
+  }
+}
+@media (min-width: 992px) {
+  #education .description{
+    width: 85%;
+  }
+}
+@media (min-width: 1200px) {
+  #education .description{
+    width: 85%;
+  }
 }
 
     </style>
@@ -320,10 +337,6 @@ a[href]:after {
   margin-bottom: 5px;
 }
 
-#education {
-  margin: 0;
-  margin-bottom: -20px;
-}
 #awards:before,
 #education:before {
   background: none;
@@ -402,11 +415,10 @@ a[href]:after {
                   </div>
                 </div>
                 <div class="row">
-                  <div class="job-details col-xs-11">
+                  <div class="col-xs-offset-1 col-xs-11">
                     <div class="profession">CTO and co-founder</div>
                     <div class="description">
                       Frontend dev of Metod
-                      <div class="highlights">Highlights</div>
                       <ul class="list-group">
                         <li class="list-group-item">Development of a project management webapp: www.metod.io</li>
                         <li class="list-group-item">Front-end JS (React, Flux, ES2015+, Babel, Webpack, eslint)</li>
@@ -426,11 +438,10 @@ a[href]:after {
                   </div>
                 </div>
                 <div class="row">
-                  <div class="job-details col-xs-11">
+                  <div class="col-xs-offset-1 col-xs-11">
                     <div class="profession">Web technical director</div>
                     <div class="description">
                       Web Game Development with facebook
-                      <div class="highlights">Highlights</div>
                       <ul class="list-group">
                         <li class="list-group-item">Des Chiffres et Des Lettres Online (Word game)</li>
                         <li class="list-group-item">Introduction of git in the company</li>
@@ -451,11 +462,10 @@ a[href]:after {
                   </div>
                 </div>
                 <div class="row">
-                  <div class="job-details col-xs-11">
+                  <div class="col-xs-offset-1 col-xs-11">
                     <div class="profession">Developper</div>
                     <div class="description">
                       Joomla Development
-                      <div class="highlights">Highlights</div>
                       <ul class="list-group">
                         <li class="list-group-item">Intranet for Yamaha Motors France with Joomla (SSO + NTLM)</li>
                       </ul>
@@ -474,11 +484,10 @@ a[href]:after {
                   </div>
                 </div>
                 <div class="row">
-                  <div class="job-details col-xs-11">
+                  <div class="col-xs-offset-1 col-xs-11">
                     <div class="profession">Developper</div>
                     <div class="description">
                       Web Game Development
-                      <div class="highlights">Highlights</div>
                       <ul class="list-group">
                         <li class="list-group-item">Internal tools development</li>
                         <li class="list-group-item">Serious games</li>
@@ -499,7 +508,7 @@ a[href]:after {
                   </div>
                 </div>
                 <div class="row">
-                  <div class="job-details col-xs-11">
+                  <div class="col-xs-offset-1 col-xs-11">
                     <div class="profession">Intern</div>
                     <div class="description">
                       Install, config and training of an internal mediawiki
@@ -518,11 +527,10 @@ a[href]:after {
                   </div>
                 </div>
                 <div class="row">
-                  <div class="job-details col-xs-11">
+                  <div class="col-xs-offset-1 col-xs-11">
                     <div class="profession">Intern</div>
                     <div class="description">
                       Module development for OpenTime
-                      <div class="highlights">Highlights</div>
                       <ul class="list-group">
                         <li class="list-group-item">Billing automation</li>
                         <li class="list-group-item">Finance optimization</li>
@@ -544,7 +552,7 @@ a[href]:after {
             </div>
             <div class="contact-item">
               <div class="icon pull-left text-center"><span class="fa fa-envelope fa-fw"></span></div>
-              <div class="title only pull-right"><a href="/cdn-cgi/l/email-protection#99eff0f7fafcf7edb7fbf0f5f5fce0d9fef4f8f0f5b7faf6f4" target="_blank"><span class="__cf_email__" data-cfemail="6117080f02040f154f03080d0d041821060c00080d4f020e0c">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">
+              <div class="title only pull-right"><a href="/cdn-cgi/l/email-protection#83f5eaede0e6edf7ade1eaefefe6fac3e4eee2eaefade0ecee" target="_blank"><span class="__cf_email__" data-cfemail="3c4a55525f595248125e55505059457c5b515d5550125f5351">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">
 /* <![CDATA[ */!function(){try{var t="currentScript"in document?document.currentScript:function(){for(var t=document.getElementsByTagName("script"),e=t.length;e--;)if(t[e].getAttribute("data-cfhash"))return t[e]}();if(t&&t.previousSibling){var e,r,n,i,c=t.previousSibling,a=c.getAttribute("data-cfemail");if(a){for(e="",r=parseInt(a.substr(0,2),16),n=2;a.length-n;n+=2)i=parseInt(a.substr(n,2),16)^r,e+=String.fromCharCode(i);e=document.createTextNode(e),c.parentNode.replaceChild(e,c)}t.parentNode.removeChild(t);}}catch(u){}}()/* ]]> */</script></a></div>
             </div>
             <div class="contact-item">
