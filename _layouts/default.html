@@ -5,27 +5,23 @@
 
   <body>
 
-    {% if page.cover %}
-      <div class="cover" style="
-        background-image: url(/assets/{{ page.cover }}); {% if page.cover_position %}
-        background-position: {{ page.cover_position }}{% endif %}"
-      >
-          {% include header.html %}
+    <main class="main">
+      {% include header.html %}
+
+      <div class="page-content">
+
+        {% if page.cover %}
+          <div class="cover" style="
+            background-image: url(/assets/{{ page.cover }}); {% if page.cover_position %}
+            background-position: {{ page.cover_position }}{% endif %}"
+          ></div>
+        {% endif %}
+
+        <div class="wrapper">
+
+          {{ content }}
+        </div>
     </div>
-    {% else %}
-      <div class="small-cover">
-        {% include header.html %}
-      </div>
-    {% endif %}
-
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
-
-    {% include footer.html %}
 
     <script src="js/main.js"></script>
     <script>
@@ -33,10 +29,10 @@
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    
+
       ga('create', 'UA-20155455-1', 'auto');
       ga('send', 'pageview');
-    
+
     </script>
   </body>
 
