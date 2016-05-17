@@ -16,7 +16,7 @@ First huge takeaway, let's encrypt has now became a mean for https everywhere. T
 
 ## Multi factor auth
 
-A really great talk about multi factor authentification with an emphasis on the drawbacks of each method that exists for the moment. There are differents ways for multi factor auth : SMS auth, app auth and physical token. Each of these has the same difficulty: what happens if you lose your tokens. If you want to have a multi factor auth, you will need to think about UX and cost, not really about security because - even if it's better - it's not full proof. Loosing a master key for physical tokens will force you to renew every token.
+A really great talk about multi factor authentification with an emphasis on the drawbacks of each method that exists for the moment. You need to be aware that it's not an imprenetrable security, even with physical tokens, you could have a breach and you need to know how to respond when someone loses its key: a lost physical token, a lost phone or a phone number change. You can't have the support people just throw a new one by weakly ("what's your birthday?") verifying the identity of the caller because you become susceptible to social engineering. There are ways around that, but you need to put this into consideration when choosing multi auth.
 
 ## Content Security Policy
 
@@ -24,8 +24,11 @@ I had no idea that this thing existed but it's really interesting. Content Secur
 
 The best thing is that you can just set this to be informative: it will just print warnings on the console to let you know what would happen if you enforced these policies. You could also use [report-uri.io](https://report-uri.io), a tool built by Scott Helme to build reporting around CSP.
 
-You can find more about CSP on this article [Content Security Poliyc - an introduction](https://scotthelme.co.uk/content-security-policy-an-introduction/).
+You can find more about CSP on this article [Content Security Policy - an introduction](https://scotthelme.co.uk/content-security-policy-an-introduction/).
 
-And to finish, a quote from Paul Mockapetris, Creator of the DNS:
+
+## Conclusion
+
+And to finish this post, a quote from Paul Mockapetris, Creator of the DNS:
 
 > "Hardware is like milk, you want the freshest but software is like wine, you want it a little aged".
