@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "My takeaways from dotSecurity 2016"
-date:   2016-05-15 16:15:00 +0200
+date:   2016-05-22 22:00:00 +0200
 categories: conf"
 cover:  "dot-security-2016.jpg"
 cover_position: "0 15%"
@@ -12,7 +12,7 @@ That said, dotSecurity was a really good surprise for the first edition of the l
 
 ## Let's encrypt everywhere
 
-First huge takeaway, let's encrypt has now became a mean for https everywhere. They have issued more than a million certificates for more than 2,4 million domains. I need to get on that even if this blog is just html pages.
+First huge takeaway, let's encrypt has now became a mean for https everywhere. They have issued more than a million certificates for more than 2,4 million domains. I need to get on that even if this blog is just html pages. Https everywhere is cleary in the tracks for the future.
 
 ## Multi factor auth
 
