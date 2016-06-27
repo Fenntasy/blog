@@ -21,6 +21,14 @@
     }]
   },
   "work": [{
+    "company": "Synbioz",
+    "position": "Developer",
+    "website": "http://www.synbioz.com",
+    "startDate": "2014-10-14",
+    "summary": "Frontend (Ember, React) and Ruby (Rails)",
+    "highlights": [
+    ]
+  },{
     "company": "Axiome",
     "position": "CTO and co-founder",
     "website": "http://www.axiome.io",
@@ -103,7 +111,7 @@
       "PHP",
       "Python",
       "Bash",
-      "Notions in functional programming, ruby, jekyll, Io"
+      "Notions in functional programming, ruby, rails, jekyll, Io"
     ]
   },{
     "name": "Databases",
@@ -147,7 +155,7 @@
       "Internet History Podcast",
       "Cortex",
       "Hello Internet",
-      "Designing Yourself"
+      "React 30"
     ]
   },{
     "name": "Avid reader",
