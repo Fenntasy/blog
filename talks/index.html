@@ -1,0 +1,21 @@
+---
+layout: home
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Talks</h1>
+
+  <ul class="post-list">
+    {% for talks in site.data.talks %}
+      <li>
+        <span class="post-meta">{{ talks.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ talks.url | prepend: site.baseurl }}">{{ talks.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+</div>
