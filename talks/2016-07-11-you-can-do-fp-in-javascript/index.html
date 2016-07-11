@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Vous pouvez faire de la programmation fonctionnelle en JavaScript !</title>
+		<style>
+			@import url(http://fonts.googleapis.com/css?family=Droid+Serif);
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+
+body {
+  font-family: 'Droid Serif';
+  font-size: medium;
+}
+.remark-container {
+  background: black;
+}
+.remark-slide-scaler {
+  box-shadow: none;
+}
+h1, h2, h3 {
+  font-family: 'Yanone Kaffeesatz'; 
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+.small * {
+  font-size: small !important;
+}
+code {
+  border-radius: 5px;
+}
+.inverse {
+  background-color: #272822;
+  color: white; /* #777872; */
+  text-shadow: 0 0 20px #333;
+}
+.inverse pre {
+  text-shadow: none;
+}
+.inverse h1, .inverse h2 {
+  color: #f3f3f3;
+  line-height: 1em;
+}
+.inverse a {
+  color: #ccc;
+  text-decoration: none;
+}
+.inverse a:hover {
+  text-decoration: underline;
+}
+.inverse strong {
+  color: #B3B34B;
+}
+.inverse .remark-inline-code {
+  color: #d6a6a6;
+  background: #545446;
+  padding: 0 10px;
+}
+.center pre {
+  text-align: left;
+}
+.center ul {
+  padding: 0;
+}
+.center li {
+  list-style-type: none;
+}
+.footnote {
+  position: absolute;
+  font-size: small;
+  bottom: 3em;
+  right: 3em;
+}
+/* styling only necessary for displaying source */
+#source {
+  position: absolute;
+  display: none;
+  font-family: monospace;
+  font-size: medium;
+  background: #333333;
+  color: white;
+  padding: 10px;
+  text-align: left;
+  width: 65%;
+  height: 70%;
+  z-index: 1000;
+}
+#overlay {
+  position: absolute;
+  display: none;
+  background: black;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  z-index: 999;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 80px;
+  margin: 20px 0;
+}
+.flex-center img {
+  margin: 0 20px;
+}
+.remark-code-line-highlighted {
+  background-color: rgba(255, 255, 0, 0.1);
+}
+.cover {
+  width: 110vw;
+  height: 110vh;
+  position: absolute;
+  top: -10vh;
+  left: -10vw;
+  -webkit-filter: blur(5px) grayscale(0.6);
+  z-index: -1;
+}
+.remark-slide-content.background-cover {
+  background-color: transparent;
+  color: white;
+  text-shadow: 0 0 10px black;
+}
+@keyframes appear {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.lambda {
+  animation: appear cubic-bezier(0.4, 0, 1, 1) 5s;
+  font-size: 50vh;
+  color: #e0de17;
+}
+
+.dialog {
+  display: flex;
+  align-items: center;
+}
+.avatar {
+  border-radius: 50%;
+  max-height: 8vh;
+  box-shadow: 0 0 15px, 0 0 15px;
+}
+.bubble {
+  position: relative;
+  padding: 15px;
+  margin: 1em 0 3em;
+  color: #fff;
+  background: #075698;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#2e88c4), to(#075698));
+  background: -moz-linear-gradient(#2e88c4, #075698);
+  background: -o-linear-gradient(#2e88c4, #075698);
+  background: linear-gradient(#2e88c4, #075698);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  margin-left: 40px;
+  background: #075698;
+}
+
+.bubble:after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50px;
+  border-width: 20px 0 0 20px;
+  border-style: solid;
+  border-color: #075698 transparent;
+  display: block;
+  width: 0;
+  top: 16px;
+  left: -40px;
+  bottom: auto;
+  border-width: 15px 40px 0 0;
+  border-color: transparent #075698;
+}
+
+		</style>
+	</head>
+	<body>
+		<textarea id="source">
+class: inverse, center, middle
+
+# Vous pouvez faire de la programmation fonctionnelle en JavaScript !
+
+## ( et c'est pas si compliqué)
+
+---
+class: inverse, center, middle
+
+# Vincent Billey  
+
+### développeur chez [Synbioz](https://www.synbioz.com)
+
+### @Fenntasy
+
+#### http://vincent.billey.me
+
+#### link_to_slides
+
+---
+class: inverse, center, middle
+
+# C'est quoi la programmation fonctionnelle ?
+
+---
+class: inverse, center, middle
+
+<img class="lambda" src="assets/lambda-cs.svg" />
+
+---
+class: inverse, center, middle
+
+<div class="lambda">λ</div>
+
+---
+class: inverse, center
+
+## Paradigme ?
+
+--
+
+## Pattern ?
+
+--
+
+## Langage ?
+
+--
+
+## ⇓
+
+## Façon de penser !
+
+---
+class: inverse, center, middle
+
+# Il est plus facile de penser en fonction qu'en objet
+
+---
+class: inverse, center, middle
+
+# Par exemple
+
+---
+class: inverse, center, middle
+
+```javascript
+fetch("https://api.myblog.com/posts")
+  .then( function(data) {
+    data.json().then( function(json) {
+      var posts = json.posts;
+      var titles = [];
+      for (var i = 0; i < posts.length; i++) {
+        titles.push(posts[i].title);
+      }
+      doSomethingWithTitles(titles);
+    })
+  })
+```
+---
+class: inverse, center, middle
+
+```javascript
+fetch("https://api.myblog.com/posts")
+  .then( data => {
+    data.json().then( json => {
+      const posts = json.posts;
+      const titles = [];
+      for (let i = 0; i < posts.length; i++) {
+        titles.push(posts[i].title);
+      }
+      doSomethingWithTitles(titles);
+    })
+  })
+```
+
+---
+class: inverse, center, middle
+
+```javascript
+fetch("https://api.myblog.com/posts")
+  .then( data => data.json() )
+  .then( json => json.posts )
+  .then( posts => {
+    const titles = [];
+    for (let i = 0; i < posts.length; i++) {
+      titles.push(posts[i].title);
+    }
+    doSomethingWithTitles(titles);
+  })
+```
+---
+class: inverse, center, middle
+
+```javascript
+fetch("https://api.myblog.com/posts")
+  .then( data => data.json() )
+  .then( json => json.posts )
+  .then( posts => posts.map( post => post.title ) )
+  .then( doSomethingWithTitles )
+```
+---
+class: inverse, center, middle
+
+```javascript
+fetch("https://api.myblog.com/posts")
+  .then( data => data.json() )
+  .then( json => json.posts )
+  .then( posts => posts.map( post => post.title ) )
+  .then( doSomethingWithTitles )
+* .catch( error => handleErrors(errors) )
+```
+
+---
+class: inverse, center, middle
+
+# Un autre exemple
+
+
+---
+class: inverse, center, middle
+
+```javascript
+const user1 = {id: 1, interest_ids: [6, 8, 10, 12] }
+const user2 = {id: 2, interest_ids: [8, 23, 30] }
+
+let hasCommonInterests = false
+double_loop: {
+  for (let i = 0; i < user1.interest_ids.length; i++) {
+    for (let j = 0; j < user2.interest_ids.length; j++) {
+      if (user1.interest_ids[i] === user2.interest_ids[j]) {
+        hasCommonInterests = true
+        break double_loop;
+      }
+    }
+  }
+}
+```
+
+---
+class: inverse, center, middle
+
+```javascript
+const user1 = {id: 1, interest_ids: [6, 8, 10, 12] }
+const user2 = {id: 2, interest_ids: [8, 23, 30] }
+import _ from "lodash"
+
+const commonInterests =  _(user1.interest_ids)
+  .intersection(user2.interest_ids)
+
+const hasCommonInterests = commonInterests.length > 0
+
+```
+
+
+---
+class: inverse, center, middle
+
+```javascript
+const user1 = {id: 1, interest_ids: [6, 8, 10, 12] }
+const user2 = {id: 2, interest_ids: [8, 23, 30] }
+import _ from "lodash"
+
+const not = bool => !bool
+
+const hasCommonInterests = _.flow(
+  _.intersection,
+  _.isEmpty,
+  not
+)
+hasCommonInterests(user1.interest_ids, user2.interest_ids) // true
+
+```
+
+---
+class: background-cover
+
+<img class="cover" src="assets/tree-falls.jpg" />
+
+# Si un arbre tombe là où il n'y a personne pour l'entendre, est ce qu'il fait du bruit ?
+
+--
+
+<div class="dialog">
+  <img src="assets/pragmatic.jpg" class="avatar"/>
+  <div class="bubble">On s'en fout non ?</div>
+</div>
+
+--
+
+<div class="dialog">
+  <img src="assets/philosopher.jpg" class="avatar" />
+  <div class="bubble">Bonne question !</div>
+</div>
+
+--
+
+<div class="dialog">
+  <img src="assets/troll.jpg" class="avatar" />
+  <div class="bubble">C'est une fausse dichotomie et la question est trop vague pour y répondre.</div>
+</div>
+
+---
+class: background-cover
+
+<img class="cover" src="assets/tree-falls.jpg" />
+
+# Si une fonction contient du code impératif, est ce que c'est toujours du fonctionnel ? 
+
+--
+
+<div class="dialog">
+  <img src="assets/pragmatic.jpg" class="avatar"/>
+  <div class="bubble">Ben ça dépend, elle est pure ?</div>
+</div>
+
+--
+
+<div class="dialog">
+  <img src="assets/philosopher.jpg" class="avatar" />
+  <div class="bubble">On pourrait sans doute la rendre fonctionnelle et ne pas avoir besoin d'utiliser du code impératif. Qu'est ce que les performances après tout sinon une vue de l'esprit ?</div>
+</div>
+
+--
+
+<div class="dialog">
+  <img src="assets/troll.jpg" class="avatar" />
+  <div class="bubble">Change de langage !</div>
+</div>
+
+---
+class: inverse
+
+# Pensez vos fonctions en terme d'entrée et de sortie
+
+--
+
+## lodash utilise des tableaux mutables, des `continue`, des `while` pour des raisons de performances
+
+--
+
+## Et ça n'empêche pas de faire du fonctionnel avec
+
+---
+class: inverse
+
+# Pour autant, écrivez du code lisible et réutilisable plutôt que performant
+
+--
+
+## Laissez les bibliothèques être performantes
+
+--
+
+## Si vous avez besoin de performance, vous réécrirez plus tard
+
+---
+class: inverse
+
+# Pour aller plus loin 
+
+--
+
+- [Lodash](https://www.lodash.com), [underscore](http://underscorejs.org/)
+
+--
+
+- [Lodash FP](https://github.com/lodash/lodash/wiki/FP-Guide), [Ramda](http://ramdajs.com/) 
+
+--
+
+- [Professor Frisby's Mostly Adequate Guide to Functional Programming](https://drboolean.gitbooks.io/mostly-adequate-guide/content/)
+
+--
+
+- [Fantasy Land Specifications](https://github.com/fantasyland/fantasy-land)
+
+--
+
+- Les talks qui vont suivre et [Lille FP](http://www.meetup.com/fr-FR/Lille-FP/) :)
+
+---
+class: inverse, center, middle
+
+# Merci, à vos questions
+
+<img class="avatar" src="assets/pragmatic.jpg" />
+&nbsp;
+<img class="avatar" src="assets/philosopher.jpg" />
+&nbsp;
+<img class="avatar" src="assets/troll.jpg" />
+
+		</textarea>
+		<script src="http://gnab.github.io/remark/downloads/remark-latest.min.js"></script>
+		<script>
+			var slideshow = remark.create({
+				highlightStyle: "rainbow",
+				highlightLines: true
+			});
+		</script>
+		<script></script>
+	</body>
+</html>
