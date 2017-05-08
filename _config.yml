@@ -23,7 +23,7 @@ redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
 
 # Outputting
-permalink: /:title
+permalink: /:title/
 exclude:
   - s3_website.yml
   - publish
