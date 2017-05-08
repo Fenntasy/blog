@@ -24,3 +24,8 @@ redcarpet:
 
 # Outputting
 permalink: /:title
+exclude:
+  - s3_website.yml
+  - publish
+  - Gemfile
+  - Gemfile.lock
