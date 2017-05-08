@@ -1,0 +1,167 @@
+/*@import url(http://fonts.googleapis.com/css?family=Droid+Serif);*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: medium;
+}
+.remark-container {
+  background: black;
+}
+.remark-slide-scaler {
+  box-shadow: none;
+}
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+h1 {
+  font-variant: small-caps;
+}
+h3, p {
+  text-align: center;
+}
+.small * {
+  font-size: small !important;
+}
+code {
+  border-radius: 5px;
+}
+.center pre {
+  text-align: left;
+}
+.center ul {
+  padding: 0;
+}
+.center li {
+  list-style-type: none;
+}
+.footnote {
+  position: absolute;
+  font-size: small;
+  bottom: 3em;
+  right: 3em;
+}
+/* styling only necessary for displaying source */
+#source {
+  position: absolute;
+  display: none;
+  font-family: monospace;
+  font-size: medium;
+  background: #333333;
+  color: white;
+  padding: 10px;
+  text-align: left;
+  width: 65%;
+  height: 70%;
+  z-index: 1000;
+}
+#overlay {
+  position: absolute;
+  display: none;
+  background: black;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  z-index: 999;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 80px;
+  margin: 20px 0;
+}
+.flex-center img {
+  margin: 0 20px;
+}
+.remark-code-line-highlighted {
+  background-color: rgba(255, 255, 0, 0.1);
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.remark-slide-content.background-cover {
+  background-color: transparent;
+  color: white;
+  text-shadow: 0 0 10px black;
+}
+.remark-slide-content {
+  color: white;
+  background: url(images/dark_synbioz.jpg) no-repeat;
+}
+.remark-slide-content:not(.cover) {
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.remark-inline-code {
+  padding: 5px;
+  font-size: 30px;
+  white-space: nowrap;
+  background: #474949;
+  color: #d2d9e1;
+}
+
+blockquote {
+  font-style: italic;
+  font-size: 48px;
+  line-height: 56px;
+  margin: 80px auto;
+  border-left: 2px solid #fff;
+  padding-left: 40px;
+}
+
+.cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: black;
+  padding: 0;
+}
+.cover h1 {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  padding: 20px 0;
+}
+.cover h2 {
+  width: 100%;
+  box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  text-align: center;
+}
+.cover p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.white {
+  background: white;
+}
+@keyframes appear {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.zoom-france {
+  transform: scale(24.7) translateY(28%) translateX(1.8%);
+  transition: transform 0.5s;
+}
+
+.unzoomed {
+  transform: scale(1.3) translateX(-9.9%);
+}
