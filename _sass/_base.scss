@@ -162,6 +162,7 @@ pre {
     max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
     margin-right: auto;
     margin-left: auto;
+    padding-top: 1em;
 
     article {
         padding-right: $spacing-unit;
