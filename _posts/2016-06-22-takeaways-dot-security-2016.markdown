@@ -2,7 +2,7 @@
 layout: post
 title:  "My takeaways from dotSecurity 2016"
 date:   2016-05-22 22:00:00 +0200
-categories: conf"
+categories: "conf"
 cover:  "dot-security-2016.jpg"
 cover_position: "0 15%"
 ---
