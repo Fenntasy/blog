@@ -311,6 +311,19 @@ html, body {
     font-size: 24px;
 }
 
+.remote-link:before {
+    content: '';
+    background-image: url(/assets/external-link.svg);
+    display: inline-block;
+    background-size: 1em;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    padding-right: 0.5em;
+    background-repeat: no-repeat;
+}
+
+
 
 
 /**

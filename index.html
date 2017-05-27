@@ -12,7 +12,11 @@ layout: home
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
         <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          {% if post.remote_url %}
+            <a class="post-link remote-link" href="{{ post.remote_url }}">{{ post.title }}</a>
+          {% else %}
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          {% endif %}
         </h2>
       </li>
     {% endfor %}
