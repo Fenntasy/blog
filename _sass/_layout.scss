@@ -97,6 +97,7 @@ html, body {
     @include mobile {
         flex-direction: row;
         align-items: stretch;
+        flex: 1 0 auto;
 
         .header-group {
             flex-direction: row;
