@@ -283,13 +283,12 @@ html, body {
  * Page content
  */
 .page-content {
-    @include desktop {
-        margin-left: 25%;
-        width: 75%;
-    }
-    @include mobile {
-        padding: 1em;
-    }
+  padding: 2em;
+  @include desktop {
+    margin-left: 25%;
+    width: 75%;
+    padding: 1em 3em;
+  }
 }
 
 .page-heading {
