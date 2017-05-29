@@ -287,6 +287,9 @@ html, body {
         margin-left: 25%;
         width: 75%;
     }
+    @include mobile {
+        padding: 1em;
+    }
 }
 
 .page-heading {
