@@ -29,3 +29,5 @@ exclude:
   - publish
   - Gemfile
   - Gemfile.lock
+  - vendor
+  - .bundle
