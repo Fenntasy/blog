@@ -1,3 +1,16 @@
+
+- title: "Manipulating time in Elm - Elm Europe"
+  url: /talks/manipulating-time-in-elm
+  date: 2017-06-09
+
+- title: "Date manipulation with Elm - Lille FP"
+  url: /talks/date-manipulation-with-elm
+  date: 2017-02-23
+
+- title: "You can do functional programming in Javascript! - Lille FP"
+  url: /talks/you-can-do-fp-in-javascript
+  date: 2016-07-11
+
 - title: "React: Putting JS in your face"
   url: /talks/2016-06-14-react-putting-js-in-your-face
   date: 2016-06-14
