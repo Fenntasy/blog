@@ -7,6 +7,7 @@
 			/*@import url(http://fonts.googleapis.com/css?family=Droid+Serif);*/
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+@import url('https://fonts.googleapis.com/css?family=Kalam');
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
@@ -24,7 +25,7 @@ h1, h2, h3 {
   margin-bottom: 40px;
 }
 a {
-  color: white;
+  /*color: white;*/
   text-decoration: none;
 }
 a:hover {
@@ -104,8 +105,8 @@ img {
   text-shadow: 0 0 10px black;
 }
 .remark-slide-content {
-  color: white;
-  background: url(images/dark_synbioz.jpg) no-repeat;
+  /*color: white;
+  background: url(images/dark_synbioz.jpg) no-repeat;*/
 }
 .remark-slide-content:not(.cover) {
   background-size: cover !important;
@@ -121,12 +122,14 @@ img {
 }
 
 blockquote {
+  font-family: "Kalam";
   font-style: italic;
   font-size: 48px;
   line-height: 56px;
   margin: 80px auto;
-  border-left: 2px solid #fff;
   padding-left: 40px;
+  border-left: 6px solid lightblue;
+  padding-right: 10px;
 }
 
 .cover {
@@ -139,9 +142,12 @@ blockquote {
 }
 .cover h1 {
   width: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
   text-align: center;
   padding: 20px 0;
+  color: white;
+  display: flex;
+  justify-content: center;
 }
 .cover h2 {
   width: 100%;
@@ -158,13 +164,16 @@ blockquote {
 .white {
   background: white;
 }
+.inverse {
+  background: black;
+}
 @keyframes appear {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
 .zoom-france {
-  transform: scale(24.7) translateY(28%) translateX(1.8%);
+  transform: scale(15) translateY(28%) translateX(1.8%);
   transition: transform 0.5s;
 }
 
@@ -177,7 +186,8 @@ blockquote {
 	<body>
 		<textarea id="source">
 class: cover
-background-image: url(images/watch.jpg)
+background-image: url(images/clock-time-stand-by-38267.jpeg)
+background-size: cover
 
 # Manipulating Time in Elm
 
@@ -196,11 +206,7 @@ background-image: url(images/watch.jpg)
 ### @Fenntasy on [Twitter](https://twitter.com/Fenntasy) and [Github](https://github.com/Fenntasy)
 
 ---
-class: cover
-background-image: url(images/time-is-complex.jpg)
-background-size: 100%
-
-## Time is complex
+class: inverse
 
 ---
 class: cover
@@ -208,27 +214,167 @@ background-image: url(images/plank-time.jpg)
 background-size: contain
 background-position: center
 
-## Just ask theoritical physicists
+---
+class: cover
+background-image: url(images/time-is-complex.jpg)
+background-size: cover
+
+---
+class: cover
+background-image: url(images/calendar.jpg)
+background-size: cover
+
+# Dates
+---
+
+## When is today?
+
+--
+
+```elm
+
+type alias Model =
+    { date : Maybe Date.Date }
+
+```
 
 ---
 
-# Dates are confusing
+## When is today?
 
---
+```elm
 
-## What is the first day of the week?
+type alias Model =
+    { date : Maybe Date.Date }
 
---
 
-## What year is it by the way?
+init =
+    ( { date = Nothing }
+    , Date.now
+      |> Task.perform SetToday
+    )
+
+```
 
 ---
 
-# Timezones are worse
+## When is today?
+
+```elm
+
+type alias Model =
+    { date : Maybe Date.Date }
+
+
+init =
+    ( { date = Nothing }
+    , Date.now
+      |> Task.perform SetToday
+    )
+
+
+type Msg
+    = SetToday Date.Date
+
+```
+
+---
+
+## When is today?
+
+```elm
+
+type alias Model =
+    { date : Maybe Date.Date }
+
+
+init =
+    ( { date = Nothing }
+    , Date.now
+      |> Task.perform SetToday
+    )
+
+
+type Msg
+    = SetToday Date.Date
+
+
+update msg model =
+    case msg of
+        SetToday date ->
+            ( { model | date = Just date }, Cmd.none )
+```
+
+[See on Ellie](https://ellie-app.com/3nZ2YRLBdfGa1/0)
+---
+class: center
+
+## rluiten/elm-date-extra
+
+--
+```elm
+today =
+  Date.Extra.Create.dateFromFields 2017 Date.Jun 9 10 0 0 0
+```
 
 --
 
-## You think you know about them?
+```elm
+usFormatedDate : Date.Date -> String
+usFormatedDate =
+  let
+    config = Date.Extra.Config.Config_en_us.config
+  in
+    Date.Extra.Format.format config config.format.longDate
+```
+
+--
+
+`Friday, June 09, 2017`
+
+
+[See on Ellie](https://ellie-app.com/3nVNnVDv8m7a1/0)
+
+---
+class: center
+
+## rluiten/elm-date-extra
+--
+
+### create
+--
+
+### compare
+--
+
+### calculate durations
+--
+
+### translate
+
+---
+class: center, middle
+
+# BUT
+
+---
+class: center, middle
+
+> Please be warned that there are many ways to manipulate dates that produce basically incorrect results.
+
+
+---
+class: cover
+background-image: url(images/clocks.jpg)
+background-size: cover
+
+# ![](images/tada.png) &nbsp; Timezones &nbsp; ![](images/tada.png)
+
+---
+class: cover
+background-image: url(images/Standard_World_Time_Zones.png)
+background-size: contain
+background-position: center
 
 ---
 class: cover
@@ -255,269 +401,8 @@ background-size: contain
 background-position: center
 
 ---
-class: cover white
 
-<img
-  src="images/world.svg"
-  class="zoom-france"
-  onClick="javascript: this.classList.toggle('unzoomed');"
-/>
-
----
-
-# But how does Elm manage this?
-
---
-
-~~~javascript
-// core/src/Native/Date.js
-
-function fromString(str) {
-* var date = new Date(str);
-  return isNaN(date.getTime())
-    ? _elm_lang$core$Result$Err('Unable to parse \''
-        + str
-        + '\' as a date. Dates must be in the ISO 8601 format.')
-    : _elm_lang$core$Result$Ok(date);
-}
-
-*fromTime: function(t) { return new Date(t); },
-~~~
-
----
-
-> For all the talk about performance in the JS ecosystem.
-> Few will blame you for using moment.
-
---
-
-### 21 kb for moment
---
-
-### 68 kb if you add locales
---
-
-### between 3 and 26 kb if you want timezone support
-
----
-class: cover
-background-image: url(images/help.jpg)
-background-size: cover
-
-## That being said, Elm will help you!
-
----
-
-# Months are a Union Type
-
-~~~elm
-type Month
-    = Jan
-    | Feb
-    | Mar
-    | Apr
-    | May
-    | Jun
-    | Jul
-    | Aug
-    | Sep
-    | Oct
-    | Nov
-    | Dec
-~~~
-
----
-
-### `fromString : String -> Result String Date`
-
---
-
-~~~elm
-import Date exposing (Date)
-
-
-type alias Model =
-    { myDate = Date
-    }
-
-
-update : Msg -> Model -> ( Model, Cmd Msg )
-update msg model =
-    case msg  of
-        UserHasEnteredDate dateString ->
-            case  Date.fromString dateString of
-                Ok date ->
-                    ( { model | myDate = date }, Cmd.none )
-
-                Err error ->
-                    ( { model | error = error }, Cmd.none )
-~~~
-
----
-
-### `now : Task x Date`
-
---
-
-~~~elm
-import Date exposing (Date)
-
-
-type alias Model =
-    { currentDate = Maybe Date
-    }
-
-
-init : ( Model, Cmd Msg )
-init  =
-    ( initModel
-    , Date.now |> Task.perform CurrentDate
-    )
-
-
-update : Msg -> Model -> ( Model, Cmd Msg )
-update msg model =
-    case msg  of
-        CurrentDate today ->
-            ( { model | currentDate = Just today }, Cmd.none )
-~~~
-
----
-class: cover
-background-image: url(images/community.jpg)
-
-## And the community is here to help
-
----
-
-## rluiten/elm-date-extra
-
---
-
-### Creation
-
---
-
-~~~elm
-import Date exposing (Month(..))
-import Date.Extra.Create exposing (dateFromFields)
-
-
-date1 =
-    dateFromFields 2017 Feb 23 18 45 0 0
-
-
-date2 =
-    dateFromFields 2017 Feb 23 23 59 59 0
-~~~
----
-
-## rluiten/elm-date-extra
-
-
-### Comparison
-
---
-
-~~~elm
-import Date exposing (Month(..))
-import Date.Extra.Create exposing (dateFromFields)
-import Date.Extra.Compare exposing (is, Compare2(..))
-
-
-date1 =
-    dateFromFields 2017 Feb 23 18 45 0 0
-
-
-date2 =
-    dateFromFields 2017 Feb 23 23 59 59 0
-
-
-isBefore : Bool
-isBefore = is Before date1 date2
-
-~~~
----
-
-## rluiten/elm-date-extra
-
-
-### Translation
-
---
-
-~~~elm
-
-import Date exposing (Month(..))
-import Date.Extra.Create exposing (dateFromFields)
-
-
-date1 =
-    dateFromFields 2017 Feb 23 18 45 0 0
-
-
-currentDate : String
-currentDate =
-    format config "%A %d %B %Y %H:%M" date1
-    -- Jeudi 23 Février 2017 18:45
-
-~~~
-
----
-
-## rluiten/elm-date-extra
-
-
-### Duration
-
-~~~elm
-
-import Date exposing (Month(..))
-import Date.Extra.Create exposing (dateFromFields)
-import Date.Extra.Duration exposing (diff)
-
-
-date1 =
-    dateFromFields 2017 Feb 23 18 45 0 0
-
-
-date2 =
-    dateFromFields 2017 Jun 8 8 30 0 0
-
-
-timeDiff : Date.Extra.Duration.DeltaRecord
-timeDiff =
-    diff date1 date2
-    -- { year = 0, month = -3, day = -12
-    -- , hour = -13, minute = -45, second = 0
-    -- , millisecond = 0
-    -- }
-
-
-~~~
-
----
-
-## rluiten/elm-date-extra
-
-> Please be warned that there are many ways to manipulate dates that produce basically incorrect results.
-
----
-class: cover
-background-image: url(images/cosmicpower.jpg)
-background-size: cover
-background-position: center
-
----
-class: cover
-background-image: url(images/tiny.jpg)
-background-size: cover
-background-position: center
-
-
----
-
-## elm-community/elm-time
+`elm-community/elm-time`
 
 --
 
@@ -525,88 +410,34 @@ background-position: center
 
 --
 
-### Kind of the same tools
+### No translation though
 
 --
 
-### No translation though
+### Heavier package
 
 ---
+class: middle, center
 
-## Creation
-
-~~~elm
-import Time.Date exposing (date)
-
-date =
-    date 1992 2 28
--- Date { year = 1992, month = 2, day = 28 } : Date
-~~~
-
---
-
-## Manipulation
-
-~~~elm
-import Time.Date exposing (date, addMonths)
-
-date =
-    date 1992 2 28
-        |> addMonths 2
--- Date { year = 1992, month = 4, day = 28 } : Date
-~~~
-
----
-
-## Comparison
-
-~~~elm
-import Time.Date exposing (date, compare)
-
-date1 =
-    date 1997 5 15
-
-date2 =
-    date 2005 7 18
-
-
-result : Order
-result =
-    compare date1 date2
--- LT
-~~~
-
----
-
-## DateTime
-
-~~~elm
-import Time.DateTime exposing (dateTime)
-
-dateTime zero
--- 0-01-01T00:00:00Z
-
-dateTime { zero | year = 2016 }
--- 2016-01-01T00:00:00Z
-
-dateTime { zero | year = 2016, month = 5, day = 29, hour = 13 }
--- 2016-05-29T13:00:00Z
-~~~
+<video loop autoplay preload width="100%">
+  <source src="images/HUGE.mp4" />
+</video>
 
 ---
 
 ## Timezone
 
 ~~~elm
-import Html exposing (text)
-import Time.TimeZones exposing (europe_paris)
-import Time.ZonedDateTime exposing (zonedDateTime, zero, toISO8601)
+import Time.TimeZones exposing (australia_eucla)
+import Time.ZonedDateTime exposing (zonedDateTime, zero, toTimestamp)
 
+displayTime : Time.Time -> String
 
+main : Html.Html msg
 main =
     let
         timezone =
-            europe_paris ()
+            australia_eucla ()
 
         date =
             zonedDateTime timezone
@@ -617,9 +448,25 @@ main =
                     , hour = 16
                 }
     in
-        text <| toISO8601 date
--- 2017-02-23T16:00:00+01:00
+        text (toTimestamp date |> displayTime) -- 2017 Feb 23 8:15
 ~~~
+
+[See on Ellie](https://ellie-app.com/3pq4GzDpFh4a1/0)
+
+---
+class: cover white
+
+<img
+  src="images/world.svg"
+  class="zoom-france"
+/>
+
+---
+class: cover white
+
+<img
+  src="images/world-with-pins.svg"
+/>
 
 ---
 
@@ -635,13 +482,11 @@ main =
 
 --
 
-## Look at Elm Native code
+## Think about what you want to do
 
----
-class: cover
-background-image: url(images/watch.jpg)
+--
 
-## Questions?
+## [bit.ly/elm-europe-time](http://bit.ly/elm-europe-time)
 
 		</textarea>
 		<script>require=(function(e,t,n){function i(n,s){if(!t[n]){if(!e[n]){var o=typeof require=="function"&&require;if(!s&&o)return o(n,!0);if(r)return r(n,!0);throw new Error("Cannot find module '"+n+"'")}var u=t[n]={exports:{}};e[n][0].call(u.exports,function(t){var r=e[n][1][t];return i(r?r:t)},u,u.exports)}return t[n].exports}var r=typeof require=="function"&&require;for(var s=0;s<n.length;s++)i(n[s]);return i})({"components/printing":[function(require,module,exports){
@@ -19245,15 +19090,16 @@ if (typeof exports === 'object') {
 },{}]},{},[3])
 ;</script>
 		<script>
-			var slideshow = remark.create({
-				highlightStyle: "rainbow",
-				highlightLines: true,
-				navigation: {
-					scroll: false
-				},
-				slideNumberFormat: ""
-			});
-		</script>
+		var slideshow = remark.create({
+  ratio: "16:9",
+  highlightStyle: "github",
+  highlightLines: true,
+  navigation: {
+    scroll: false
+  },
+  slideNumberFormat: ""
+});
+</script>
 		<script></script>
 	</body>
 </html>

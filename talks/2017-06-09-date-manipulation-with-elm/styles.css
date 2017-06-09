@@ -1,6 +1,7 @@
 /*@import url(http://fonts.googleapis.com/css?family=Droid+Serif);*/
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+@import url('https://fonts.googleapis.com/css?family=Kalam');
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
@@ -18,7 +19,7 @@ h1, h2, h3 {
   margin-bottom: 40px;
 }
 a {
-  color: white;
+  /*color: white;*/
   text-decoration: none;
 }
 a:hover {
@@ -98,8 +99,8 @@ img {
   text-shadow: 0 0 10px black;
 }
 .remark-slide-content {
-  color: white;
-  background: url(images/dark_synbioz.jpg) no-repeat;
+  /*color: white;
+  background: url(images/dark_synbioz.jpg) no-repeat;*/
 }
 .remark-slide-content:not(.cover) {
   background-size: cover !important;
@@ -115,12 +116,14 @@ img {
 }
 
 blockquote {
+  font-family: "Kalam";
   font-style: italic;
   font-size: 48px;
   line-height: 56px;
   margin: 80px auto;
-  border-left: 2px solid #fff;
   padding-left: 40px;
+  border-left: 6px solid lightblue;
+  padding-right: 10px;
 }
 
 .cover {
@@ -133,9 +136,12 @@ blockquote {
 }
 .cover h1 {
   width: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
   text-align: center;
   padding: 20px 0;
+  color: white;
+  display: flex;
+  justify-content: center;
 }
 .cover h2 {
   width: 100%;
@@ -152,13 +158,16 @@ blockquote {
 .white {
   background: white;
 }
+.inverse {
+  background: black;
+}
 @keyframes appear {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
 .zoom-france {
-  transform: scale(24.7) translateY(28%) translateX(1.8%);
+  transform: scale(15) translateY(28%) translateX(1.8%);
   transition: transform 0.5s;
 }
 
