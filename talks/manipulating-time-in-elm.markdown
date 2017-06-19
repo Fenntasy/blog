@@ -6,7 +6,7 @@ date:   2017-06-09 11:20:00 +0100
 
 ## Video
 
-[View on Youtube](https://youtu.be/DqnxHF8tCuQ?t=11268)
+<iframe width="800" height="450" src="https://www.youtube.com/embed/ztqEIchSDgM?list=PLqpJE8VRX3UMPbkIyfOES-nMDlJhCrD2Q" frameborder="0" allowfullscreen></iframe>
 
 ## Slides
 
